@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import searchReducer from "./searchReducer";
+import cartReducer from "./cartReducer";
 
 const reducers = combineReducers({
-    search: searchReducer
+    cart: cartReducer
 });
 
 export default reducers;

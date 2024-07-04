@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../Components/Navbar';
 import { IoCartOutline } from "react-icons/io5";
+import {BeatLoader} from 'react-spinners'
+import { addToCart } from '../Redux/reducers/cartReducer';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+
 
 function Home() {
   const Navigate = useNavigate()
@@ -26,6 +28,12 @@ function Home() {
   }, []);
 
 
+  const handleAddToCart = (e, product) => {
+    e.stopPropagation(); 
+    dispatch(addToCart(product))
+  };
+
+
   return (
     <>
       <div className="flex flex-col justify-center items-center min-h-screen bg-gray-50">
@@ -43,17 +51,10 @@ function Home() {
                   <p className="text-lg font-bold text-black truncate block capitalize">{product.title}</p>
                   <div className="flex items-center">
                     <p className="text-lg font-semibold text-black cursor-auto my-3">${product.price}</p>
-                    {product.oldPrice && (
-                      <div>
-                        <p className="text-sm text-gray-600 cursor-auto ml-2">${product.oldPrice}</p>
-                      </div>
-                    )}
-                    <div className="ml-auto">
-                      <a href="#">
+                    <div className="ml-auto" onClick={(e) => handleAddToCart(e,product)}>
                         <button className=" hover:shadow-[0_6px_20px_rgba(93,93,93,23%)] px-3 py-3 bg-[#fff] text-[#696969] shadow-md shadow-black rounded-full font-light transition duration-200 ease-linear">
                           <IoCartOutline className='text-black font-black hover:text-cyan-500 ' />
                         </button>
-                      </a>
                     </div>
                   </div>
                  
@@ -61,7 +62,9 @@ function Home() {
               </div>
             ))
           ) : (
-            <p>Loading...</p>
+            <div className="w-screen  h-screen flex justify-center items-center">
+            <BeatLoader />
+            </div>
           )}
         </div>
       </div>

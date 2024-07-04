@@ -78,8 +78,8 @@ function Navbar() {
           </div>
 
           <div className='flex items-center space-x-8'>
-            <span className="relative">
-              <IoCartOutline size={40} className='text-white' />
+            <span onClick={() => navigate('/cart')} className="relative">
+              <IoCartOutline size={40} className='text-white'/>
               <span className="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
             </span>
 

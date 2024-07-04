@@ -83,8 +83,9 @@ function SearchedProducts() {
             </div>
           ))
         ) : (
-          <p>Loading...</p>
-        )}
+          <div className="w-screen  h-screen flex justify-center items-center">
+          <BeatLoader />
+          </div>        )}
       </div>
     </div>
   );

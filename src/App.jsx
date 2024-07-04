@@ -4,7 +4,7 @@ import Home from "./Pages/Home"
 import ProductView from "./Components/ProductView"
 import UserLayout from "../Layout/UserLayout"
 import SearchedProducts from "./Pages/SearchedProducts"
-
+import Cart from "./Pages/Cart"
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/productview" element={<ProductView />} />
           <Route path='/searchedproducts' element={<SearchedProducts />} />
+          <Route path='/cart' element={<Cart/>}/>
         </Route>
 
 
