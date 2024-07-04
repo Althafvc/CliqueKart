@@ -3,10 +3,13 @@ import Navbar from '../Components/Navbar';
 import { IoCartOutline } from "react-icons/io5";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function Home() {
   const Navigate = useNavigate()
+  const dispatch = useDispatch()
   const [products, setProducts] = useState([]);
+ 
 
   useEffect(() => {
     async function fetchProducts() {
