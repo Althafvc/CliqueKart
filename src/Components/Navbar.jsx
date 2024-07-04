@@ -54,17 +54,15 @@ function Navbar() {
             <li className='mb-6 hidden max-lg:block'>
               <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' /></a>
             </li>
-            <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>New</a></li>
-            <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Men</a></li>
-            <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Women</a></li>
-            <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Kids</a></li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-white hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/`)}>Home</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-white hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/filter?key=new`)}>New</li>
+            <li className='text-white hover:text-cyan-400 text-[15px] block font-semibold max-lg:border-b max-lg:py-3 px-3' onClick={() => navigate(`/filter?key=mens`)}>Men</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-white hover:text-cyan-400 text-[15px] block font-semibold'onClick={() => navigate(`/filter?key=women`)}>Women</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-white hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/filter?key=jewellery`)}>jewellery</li>
+        
           </ul>
         </div>
-
+       
         <div className="flex gap-x-6 gap-y-4 ml-auto">
           <div
             className='flex border-2 focus-within:border-gray-400 rounded-full px-6 py-3 overflow-hidden max-w-52 max-lg:hidden'>
@@ -80,24 +78,20 @@ function Navbar() {
           <div className='flex items-center space-x-8'>
             <span onClick={() => navigate('/cart')} className="relative">
               <IoCartOutline size={40} className='text-white'/>
-              <span className="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
             </span>
 
             <div onClick={handleNav} className='mr-6 z-20 md:hidden'>
-              {nav ? <AiOutlineClose size={20} className='text-black' /> : <AiOutlineMenu size={20} className='text-black' />}
+              {nav ? <AiOutlineClose size={20} className='text-white' /> : <AiOutlineMenu size={20} className='text-white' />}
             </div>
           </div>
 
           <div className={nav ? 'fixed z-10 top-[76px] left-0 right-0 h-screen bg-white ease-out duration-500' : 'fixed left-[-100%]'}>
             <ul>
-              <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  className='text-cyan-400 hover:text-cyan-400 text-[15px] block font-semibold'>New</a></li>
-              <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Men</a></li>
-              <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Women</a></li>
-              <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                  className='text-white hover:text-cyan-400 text-[15px] block font-semibold'>Kids</a></li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-black hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/`)}>Home</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-black hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/filter?key=new`)}>New</li>
+            <li className='text-black hover:text-cyan-400 text-[15px] block font-semibold max-lg:border-b max-lg:py-3 px-3' onClick={() => navigate(`/filter?key=mens`)}>Men</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-black hover:text-cyan-400 text-[15px] block font-semibold'onClick={() => navigate(`/filter?key=women`)}>Women</li>
+            <li className='max-lg:border-b max-lg:py-3 px-3 text-black hover:text-cyan-400 text-[15px] block font-semibold' onClick={() => navigate(`/filter?key=jewellery`)}>jewellery</li>
             </ul>
           </div>
         </div>

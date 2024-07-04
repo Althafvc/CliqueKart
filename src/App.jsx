@@ -5,6 +5,7 @@ import ProductView from "./Components/ProductView"
 import UserLayout from "../Layout/UserLayout"
 import SearchedProducts from "./Pages/SearchedProducts"
 import Cart from "./Pages/Cart"
+import Filter from "./Pages/Filter"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/productview" element={<ProductView />} />
           <Route path='/searchedproducts' element={<SearchedProducts />} />
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/filter' element={<Filter/>}/>
         </Route>
 
 
