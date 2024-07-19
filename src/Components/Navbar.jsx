@@ -35,8 +35,8 @@ function Navbar() {
   return (
     <header className='flex bg-black py-4 sm:px-8 px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50'>
       <div className='flex flex-wrap items-center lg:gap-y-2 gap-4 w-full'>
-        <a href="javascript:void(0)"><img src={logo} alt="logo" className='w-30 h-20' /></a>
-        <div id="collapseMenu"
+        <a href="javascript:void(0)"><img src={logo} alt="image not found" className='w-30 h-20' /></a>
+        <div id="collapseMenu" 
           className='lg:ml-10 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
           <button id="toggleClose" className='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3'>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 fill-black" viewBox="0 0 320.591 320.591">

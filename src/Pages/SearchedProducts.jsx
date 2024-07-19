@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { IoCartOutline } from 'react-icons/io5';
 import axios from 'axios';
+import {BeatLoader} from 'react-spinners'
 
 function SearchedProducts() {
   const [term, setTerm] = useState('');
